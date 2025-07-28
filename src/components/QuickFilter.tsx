@@ -30,7 +30,7 @@ export const QuickFilter = ({ filter, index, availableProperties, onUpdate, onRe
     <div
       className={`group relative overflow-hidden rounded-2xl border-2 transition-all duration-300 ${
         filter.active
-          ? "bg-gradient-to-br from-white to-purple-50 border-purple-200 shadow-lg shadow-purple-100/50"
+          ? "bg-gradient-to-br from-white to-purple-50 border-purple-200 shadow-sm"
           : "bg-gradient-to-br from-slate-50 to-slate-100 border-slate-200 shadow-sm"
       }`}
     >
@@ -63,7 +63,7 @@ export const QuickFilter = ({ filter, index, availableProperties, onUpdate, onRe
             <select
               value={filter.property}
               onChange={(e) => onUpdate("property", e.target.value)}
-              className={`w-full p-3 text-sm border-2 rounded-xl font-medium transition-all ${
+              className={`w-full p-2 text-sm border-2 rounded-xl font-medium transition-all ${
                 filter.active
                   ? "border-purple-200 focus:border-purple-400 focus:ring-4 focus:ring-purple-100 bg-white"
                   : "border-slate-200 bg-slate-50 text-slate-500"
@@ -82,7 +82,7 @@ export const QuickFilter = ({ filter, index, availableProperties, onUpdate, onRe
             <select
               value={filter.operator}
               onChange={(e) => onUpdate("operator", e.target.value)}
-              className={`w-full p-3 text-sm border-2 rounded-xl font-medium transition-all ${
+              className={`w-full p-2 text-sm border-2 rounded-xl font-medium transition-all ${
                 filter.active
                   ? "border-purple-200 focus:border-purple-400 focus:ring-4 focus:ring-purple-100 bg-white"
                   : "border-slate-200 bg-slate-50 text-slate-500"
@@ -112,10 +112,6 @@ export const QuickFilter = ({ filter, index, availableProperties, onUpdate, onRe
           </div>
         </div>
       </div>
-
-      {filter.active && (
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-purple-600" />
-      )}
     </div>
   )
 }

@@ -32,7 +32,9 @@ export const SplashScreen = ({ onComplete }: SplashScreenProps) => {
             isAnimating ? "scale-100 opacity-100 translate-y-0" : "scale-75 opacity-0 translate-y-4"
           }`}
         >
-          <Image src={"/logo.png"} alt="JSONator Logo" width={64} height={64} className="w-16 h-16" />
+          <div className="p-6 bg-white/20 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/30">
+            <Image src={"/logo.png"} alt="JSONator Logo" width={64} height={64} className="w-16 h-16" />
+          </div>
         </div>
 
         <div
