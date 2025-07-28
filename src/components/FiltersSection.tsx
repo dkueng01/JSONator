@@ -9,7 +9,7 @@ import { AdvancedFilter } from "./AdvancedFilter"
 import type { FilterRule, FilterMode } from "@/types"
 
 interface FiltersSectionProps {
-  mode: FilterMode
+  mode: string
   onModeChange: (mode: string) => void
   quickFilters: FilterRule[]
   availableProperties: string[]

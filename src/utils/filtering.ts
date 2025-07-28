@@ -40,7 +40,7 @@ export const applyAdvancedFilter = (data: any[], filter: string): FilterResult =
   if (!filter.trim()) return { data }
 
   try {
-    const filterFunction = new Function("x", `return ${filter}`)
+    const filterFunction: any = new Function("x", `return ${filter}`)
     const filteredData = data.filter(filterFunction)
     return { data: filteredData }
   } catch (error) {

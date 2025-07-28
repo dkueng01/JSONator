@@ -16,7 +16,7 @@ export default function JSONator() {
   // UI State
   const [showSplash, setShowSplash] = useState(true)
   const [jsonInput, setJsonInput] = useState("")
-  const [filterMode, setFilterMode] = useState<FilterMode>("quick")
+  const [filterMode, setFilterMode] = useState<string>("quick")
   const [copiedHistoryFilter, setCopiedHistoryFilter] = useState<string>()
 
   // Filter State
