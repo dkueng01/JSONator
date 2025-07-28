@@ -23,7 +23,7 @@ export const SplashScreen = ({ onComplete }: SplashScreenProps) => {
 
   return (
     <div
-      className="fixed inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 flex items-center justify-center z-50 cursor-pointer"
+      className="fixed inset-0 bg-gradient-to-br from-blue-200 via-blue-100 to-blue-300 flex items-center justify-center z-50 cursor-pointer"
       onClick={onComplete}
     >
       <div className="text-center">
@@ -42,14 +42,6 @@ export const SplashScreen = ({ onComplete }: SplashScreenProps) => {
         >
           <h1 className="text-5xl font-bold text-white mb-4 drop-shadow-lg">JSONator</h1>
           <p className="text-xl text-white/90 font-medium drop-shadow-sm">Simple JSON Array Filter Tool</p>
-        </div>
-
-        <div
-          className={`mt-12 transition-all duration-1000 delay-700 ${
-            isAnimating ? "opacity-60 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
-          <p className="text-sm text-white/70">Click anywhere to continue</p>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ import type { FilterRule, FilterMode } from "@/types"
 
 interface FiltersSectionProps {
   mode: FilterMode
-  onModeChange: (mode: FilterMode) => void
+  onModeChange: (mode: string) => void
   quickFilters: FilterRule[]
   availableProperties: string[]
   activeFilterCount: number
@@ -57,12 +57,12 @@ export const FiltersSection = ({
 }: FiltersSectionProps) => {
   return (
     <Card className="shadow-sm border-slate-200 flex flex-col h-full">
-      <CardHeader className="pb-4 flex-shrink-0">
+      <CardHeader className="flex-shrink-0">
         <CardTitle className="flex items-center gap-3 text-slate-700">
           <div className="p-2 bg-purple-100 rounded-lg">
             <Filter className="w-4 h-4 text-purple-600" />
           </div>
-          Filters
+          <span className="text-xl font-bold">Filters</span>
           {mode === "quick" && activeFilterCount > 0 && (
             <Badge variant="secondary" className="ml-auto bg-purple-100 text-purple-700 border-purple-200">
               {activeFilterCount} active
@@ -76,7 +76,7 @@ export const FiltersSection = ({
         </CardTitle>
       </CardHeader>
 
-      <CardContent className="flex-1 flex flex-col p-6 min-h-0 overflow-hidden">
+      <CardContent className="flex-1 flex flex-col px-6 min-h-0 overflow-hidden">
         <Tabs value={mode} onValueChange={onModeChange} className="flex-1 flex flex-col min-h-0">
           <TabsList className="grid w-full grid-cols-2 bg-slate-100 flex-shrink-0 mb-6 h-12 rounded-xl">
             <TabsTrigger

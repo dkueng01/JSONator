@@ -23,13 +23,15 @@ export const ResultsSection = ({ data, totalCount, onCopy, copySuccess }: Result
 
   return (
     <Card className="h-full shadow-sm border-slate-200 flex flex-col">
-      <CardHeader className="pb-4 flex-shrink-0">
+      <CardHeader className="flex-shrink-0">
         <div className="flex items-center justify-between">
           <CardTitle className="flex items-center gap-3 text-slate-700">
             <div className="p-2 bg-emerald-100 rounded-lg">
               <Code2 className="w-4 h-4 text-emerald-600" />
             </div>
-            Filtered Results
+            <span className="text-xl font-bold">
+              Filtered Results
+            </span>
           </CardTitle>
           <div className="flex items-center gap-3">
             <Badge variant="outline" className="bg-slate-50 text-slate-600 border-slate-200">

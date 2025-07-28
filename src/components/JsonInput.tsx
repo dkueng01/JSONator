@@ -15,12 +15,12 @@ interface JsonInputProps {
 export const JsonInput = ({ value, onChange, itemCount, error }: JsonInputProps) => {
   return (
     <Card className="shadow-sm border-slate-200 h-fit">
-      <CardHeader className="pb-4">
+      <CardHeader className="flex-shrink-0">
         <CardTitle className="flex items-center gap-3 text-slate-700">
           <div className="p-2 bg-blue-100 rounded-lg">
             <Database className="w-4 h-4 text-blue-600" />
           </div>
-          JSON Data
+          <span className="text-xl font-bold">JSON Data</span>
           {itemCount > 0 && (
             <Badge variant="secondary" className="ml-auto bg-green-100 text-green-700 border-green-200">
               {itemCount} items
